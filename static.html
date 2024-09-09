@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class ClassWithPrivateStaticField 
+        {
+            static #PRIVATE_STATIC_FIELD;
+            static publicStaticMethod() 
+            {
+                ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
+                return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+            }
+        }
+        console.log(ClassWithPrivateStaticField.publicStaticMethod() === 42)
+
+    </script>
+
+</body>
+
+</html>

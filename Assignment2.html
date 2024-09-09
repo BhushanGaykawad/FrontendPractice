@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="date" align="right"></p>
+    <script>
+        function cur_date(){
+
+        
+        var date=new Date();
+        var day=date.getDate();
+        var month=date.getMonth()+1;
+        var year=date.getFullYear();
+        var hours=date.getHours();
+        var min=date.getMinutes();
+        var sec=date.getSeconds();
+
+        var fullDate=day+":"+month+":"+year+":"+hours+":"+min+":"+sec;
+        document.getElementById("date").innerHTML=fullDate;
+    };
+    setInterval(cur_date(), 1000);
+
+    </script>
+    
+    
+</body>
+</html>

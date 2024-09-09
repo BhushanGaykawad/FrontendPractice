@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit= "return ValidateForm()">
+        <label>Enter name:</label>
+        <input type="text" id="name"  />
+        <span id="nameError"></span><br>
+        <br>
+
+        <label>DOB:</label>
+        <input type="date" id="dob" />
+        <span id="dobError"></span><br>
+        <br>
+
+
+        <label>Gender:</label>
+        <select id="Gender">
+            <option>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <span id="GenderError"></span><br>
+        <br>
+
+
+        <label>Address</label>
+        <textarea id="Address" ></textarea>
+         <span id="AddressError"></span><br>
+        <br>
+
+        <input type="submit"></button>
+    </form>
+    <script>
+        function ValidateForm()
+        {
+            var isValid=true;
+
+        
+        var name=document.getElementById("name").value;
+        var nameError=document.getElementById("nameError");
+        if(name.trim()==="")
+        {
+            alert("Name is mandatory")
+            nameError.innerHTML="Name is required."
+            isValid=false
+        }
+
+        var dob=document.getElementById("dob").value;
+        var dobError=document.getElementById("dobError")
+        if(dob.trim()==="")
+        {
+           alert("Enter DOB..!!");
+           dobError.innerHTML="Enter the DOB..!!"
+           isValid=false
+        }
+
+        var gen=document.getElementById("Gender").value;
+      //  var genderErr=document.getElementById("GenderError");
+        if(gen === "")
+        {
+           alert("Select Gender..!!")
+        //   genderErr.innerHTML="Select Gender..!!"
+           isValid=false;
+        }
+
+
+        var add=document.getElementById("Address").value;
+        var AddressError=document.getElementById("AddressError");
+        if(add.trim()==="")
+        {
+           alert("Enter Address..!!")
+           AddressError.innerHTML="Address is required..!!"
+           isValid=false;
+        }
+
+       
+        return isValid;
+    }
+    </script>
+
+
+   
+</body>
+</html>

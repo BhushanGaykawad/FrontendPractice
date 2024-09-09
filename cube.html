@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cube=(num)=>(num*num*num);
+        document.write(cube(10));
+        document.write("</br>");
+
+        var fact=(num)=>
+        {
+            var fact=1;
+            var res;
+            if(num==0||num==1)
+            {
+                return 1;
+            }
+            else
+            {
+                for(i=1;i<=num;i++)
+                {
+                    fact=fact*i;
+                }
+                return fact;
+            }
+            
+
+        }
+        document.write(fact(4));
+        document.write("</br>");
+
+
+        //write a function which will do the sum of numbers and call this method with different no of parameters.
+
+        var sum1=(...num)=>{   var sum=0;
+            for(let i=0;i<num.length;i++)
+            {
+                sum=sum+num[i];  
+            }
+            return sum;
+        }
+        var res=sum1(1,2,3,4);
+        document.write(res);
+        document.write("</br>");
+
+        var getTempItem = function(id) 
+        {
+            return {id: id,name: "Temp"};
+        };
+        let data=getTempItem(2);
+        document.write(data);
+
+
+
+    </script>
+
+
+</body>
+</html>
